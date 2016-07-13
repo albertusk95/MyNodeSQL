@@ -1,0 +1,13 @@
+{
+  "name": "Node.js app with MySQL",
+  "description": "connecting nodejs app to Mysql",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.14.0",
+    "body-parser": "1.15.2",
+    "mysql": "2.11.1"
+  }
+}
