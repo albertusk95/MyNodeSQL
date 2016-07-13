@@ -1,0 +1,47 @@
+<div class="container">
+	<div id="name-group" class="form-group">
+		<label>Your query</label><br/>
+		<input type="text" class="form-control"  ng-model="name" ng-keyup="keyup()" ng-keydown="keydown()" ng-blur="blur()"  ng-change="change()" placeholder="Type the full or partial name..."/><br/>
+	</div>
+
+	<div class="rows">
+		<div class="col-md-12">
+		
+			<div class="panel panel-primary" ng-show="data_server.length > 0">
+				<div id="searchResult" class="panel-heading">
+					<h3 class="panel-title" align="center">Search result</h3>
+				</div>
+				<div class="panel-body">
+					<table class="table">
+					<tr>
+						<td align="center"><b>ID</b></td>
+						<td align="center"><b>Name</b></td>
+						<td align="center"><b>Location</b></td>
+					</tr>
+					<tr ng-repeat="data in data_server">
+						<td align="center">
+							{{ data.id }}
+						</td>
+						<td align="center">
+							{{ data.name }}
+						</td>
+						<td align="center">
+							{{ data.location }}
+						</td>
+					</tr>
+				</table>
+				</div>
+			</div>
+			
+			<div ng-show="data_server.length == 0">
+				<div class="alert alert-info" >
+					<p class="text-center" >
+						Your query doesn't exist.  
+					</p >
+				</div >
+			</div >
+			
+			
+		</div>
+	</div>
+</div>
